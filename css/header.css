@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+body {
+    background-color: lightblue;
+    background-image: url("../img/book-shelves-background.avif");
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+main {
+    height: fit-content;
+    width: 75%;
+    margin: 0 auto;
+    background-color: #f0efeb;
+}
+
+header {
+    padding: 0 12.5% 0 12.5%;
+    /* margin-right: 12.5%;
+    margin-left: 12.5%; */
+    background-color: #FAEDCD;
+    position: sticky;
+    top: 0;
+}
+
+.nav-container nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-container nav img {
+    max-width: 80px;
+}
+
+#desktop-menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: fit-content;
+}
+
+#desktop-menu li {
+    width: auto;
+    margin: 0.5em 1em;
+    font-size: 20px;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: black;
+    padding: 10px, 20px;
+}
+
+#user-icon {
+    max-width: 40px;
+}
+
+/* ------------------ Dropdown log out menu ------------------*/
+
+.nav-container #desktop-menu .dropdown {
+    display: inline-block;
+    position: relative;
+    margin: 0 0.5em;
+}
+
+.nav-container #desktop-menu .drop-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: fit-content;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+}
+
+.nav-container #desktop-menu .drop-menu-item {
+    width: 72px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-container #desktop-menu .drop-menu-item:hover {
+    background-color: #eee;
+}
+
+.nav-container #desktop-menu .drop-menu-item a {
+    color: #555;
+}
+
+.nav-container #desktop-menu .dropdown:hover .drop-menu {
+    display: block;
+}
+
+/* --------------- Mobile menu ---------------------------*/
+#desktop-menu {
+    /* display: none; */
+}
+
+.book-container .new-item {
+    display: none;
+}
+
+.nav-container #mobile-menu {
+    display: none;
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8em;
+}
+
+#mobile-menu li {
+    list-style-type: none;
+    font-size: 1.8rem;
+}
+
+#mobile-menu h2 {
+    margin: 2rem 0;
+    cursor: pointer;
+}
+
+#mobile-menu a {
+    color: #fff;
+}
+
+#mobile-menu hr {
+    color: lightgray;
+    width: 100%;
+}
