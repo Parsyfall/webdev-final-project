@@ -10,20 +10,19 @@ body {
     background-color: lightblue;
     background-image: url("../img/book-shelves-background.avif");
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    min-height: 100vh;
 }
 
 main {
-    height: fit-content;
+    min-height: 100vh;
     width: 75%;
     margin: 0 auto;
     background-color: #f0efeb;
+    padding-bottom: 1px;
 }
 
 header {
-    padding: 0 12.5% 0 12.5%;
-    /* margin-right: 12.5%;
-    margin-left: 12.5%; */
+    padding: 0 12.5%;
+    width: 100%;
     background-color: #FAEDCD;
     position: sticky;
     top: 0;
@@ -32,6 +31,7 @@ header {
 .nav-container nav {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
@@ -99,43 +99,126 @@ header {
 }
 
 /* --------------- Mobile menu ---------------------------*/
-#desktop-menu {
-    /* display: none; */
-}
 
-.book-container .new-item {
+/* .book-container .new-item {
     display: none;
-}
+} */
 
-.nav-container #mobile-menu {
+#mobileMenu {
     display: none;
     position: fixed;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.95);
     color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 8em;
+    z-index: 1;
+    overflow-y: hidden;
 }
 
-#mobile-menu li {
-    list-style-type: none;
-    font-size: 1.8rem;
-}
-
-#mobile-menu h2 {
-    margin: 2rem 0;
+.mobile-menu h1 {
+    text-align: center;
+    font-size: 3rem;
     cursor: pointer;
 }
 
-#mobile-menu a {
+#mobileMenuIcon {
+    display: inline-block;
+    width: 70px;
+}
+
+.mobile-menu ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.mobile-menu li {
+    font-size: 3rem;
+    border-bottom: 1px solid #fff;
+}
+
+.mobile-menu li:first-child {
+    border-top: 1px solid #fff;
+}
+
+.mobile-menu li a {
+    display: block;
+    text-decoration: none;
     color: #fff;
 }
 
-#mobile-menu hr {
-    color: lightgray;
-    width: 100%;
+
+/* 600px or less */
+@media only screen and (max-width: 600px) {
+
+    #mobileMenuIcon {
+        display: inline;
+    }
+
+    #desktop-menu {
+        display: none;
+    }
+
+    .footer-wrapper {
+        flex-direction: column;
+    }
+
+    .footer-wrapper .footer-menu {
+        align-self: center;
+    }
+}
+
+/* At least 610px */
+@media only screen and (min-width: 610px) {
+    #desktop-menu {
+        display: inline-block;
+    }
+
+    #mobileMenuIcon {
+        display: none;
+    }
+}
+
+footer {
+    background-color: #FAEDCD;
+    padding: 0 10%;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-between;
+}
+
+.footer-menu,
+.contact-us {
+    padding: 2em 0;
+    width: fit-content;
+}
+
+.footer-wrapper ul li {
+    list-style-type: none;
+    padding: 5px 0;
+}
+
+.footer-wrapper h3 {
+    padding: 5px 0;
+    text-align: center;
+}
+
+.footer-wrapper span {
+    font-weight: 600;
+}
+
+.footer-wrapper ul a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-wrapper .contact-us .social-media {
+    padding-top: 10px;
+}
+
+.footer-wrapper .contact-us .social-media img {
+    display: inline-block;
+    width: 40px;
 }

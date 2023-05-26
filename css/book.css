@@ -1,4 +1,4 @@
-.main {
+.main-element {
     display: flex;
 }
 
@@ -80,4 +80,104 @@ hr {
 .book-info h3 {
     margin-top: 0.8em;
     margin-bottom: 0.8em;
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        flex-flow: row wrap;
+        max-width: inherit;
+    }
+
+    .book-info {
+        margin-left: 1em;
+    }
+
+    .book-cover img {
+        max-width: 100%;
+    }
+}
+
+/* ----------------- Side scroll ---------------------- */
+.side-scroll {
+    margin: 10px 20px 0 20px;
+    border-top: 1px solid #bbb;
+}
+
+.side-scroll>h2:first-child{
+    color: #bbb;
+    padding: 20px 20px;
+}
+
+.side-scroll-wrapper {
+    margin: 20px 20px;
+}
+
+.scroll-books {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    /* Hide scrollbar */
+    /* IE and Edge */
+    -ms-overflow-style: none;
+    /* Firefox */
+    scrollbar-width: none;
+}
+
+.scroll-books::-webkit-scrollbar {
+    display: none;
+    /* Chrome */
+}
+
+.book {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-height: 400px;
+    max-width: 250px;
+    margin: 1px 20px;
+
+    text-align: center;
+    color: #891924;
+}
+
+.cover {
+    max-height: 300px;
+    max-width: inherit;
+}
+
+.scroll-books .cover img {
+    object-position: top;
+    height: 100%;
+}
+
+.side-scroll {
+    position: relative;
+}
+
+.left {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    transform: rotate(180deg);
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.right {
+    position: absolute;
+    right: 0;
+    top: 40%;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.left::before,
+.right::before {
+    content: "\27A4";
+    /* content: "\27B2"; */
+    color: red;
 }
