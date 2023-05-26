@@ -16,6 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `adresa_clienti`
+--
+
+DROP TABLE IF EXISTS `adresa_clienti`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `adresa_clienti` (
+  `id_client` int NOT NULL,
+  `Tara` varchar(100) NOT NULL,
+  `Judet` varchar(100) NOT NULL,
+  `Oras` varchar(100) NOT NULL,
+  `Strada` varchar(100) NOT NULL,
+  `nr_strada` int NOT NULL,
+  `Apartament` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `adresa_clienti`
+--
+
+LOCK TABLES `adresa_clienti` WRITE;
+/*!40000 ALTER TABLE `adresa_clienti` DISABLE KEYS */;
+INSERT INTO `adresa_clienti` VALUES (2,'Romania','Alba','Alba Iulia','Vasile Alecsandri',108,5),(3,'Romania','Alba','Alba Iulia','Vasile Goldis',17,34),(4,'Romania','Alba','Alba Iulia','Bulevardul Transilvaniei',12,56);
+/*!40000 ALTER TABLE `adresa_clienti` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `autor`
 --
 
@@ -94,7 +122,7 @@ CREATE TABLE `carte` (
 
 LOCK TABLES `carte` WRITE;
 /*!40000 ALTER TABLE `carte` DISABLE KEYS */;
-INSERT INTO `carte` VALUES (4,'Harry Potter și Camera Secretelor','9786060865926','harry-potter-si-camera-secretelor.jpg',1,'2013-05-20',14),(5,'Orasul bantuit','9786065794474','orasul-bantuit.jpg',3,'2014-05-20',0),(6,'Harry Potter și Piatra Filosofala','9786060861975','harry-potter-si-piatra-filosofala.jpg',1,'2010-05-20',2),(7,'The Stand','9786060861175','the-stand.jpeg',3,'2011-05-20',5),(11,'Amintiri din copilărie','9781260821973','amintiri-din-copilarie.jpg',5,'2017-05-20',1),(33,'Harry Potter și prizonierul din Azkaban','9786060861973','harry-potter-si-prizonierul-din-azkaban-cover.jpg',1,'2014-05-20',0),(34,'Harry Potter și Pocalul de Foc','9786060865988','harry-potter-4-si-pocalul-de-foc-cover.jpg',1,'2022-05-20',6),(35,'Harry Potter și Ordinul Phoenix','9786067887723','harry-potter-si-ordinul-phoenix-5-cover.jpg',1,'2016-05-20',4),(36,'Harry Potter și Prințul Semisânge','9786060862345','harry-potter-si-printul-semisange-cover.jpg',1,'2018-05-20',18),(37,'Harry Potter și Talismanele Morții','9786060861331','harry-potter-si-talismanele-mortii-cover.jpg',1,'2021-05-20',18),(38,'Aventurile lui Huckleberry Finn','9786060865827','aventurile-lui-huckleberry-finn-cover.jpg',2,'2012-05-20',14),(39,'Aventurile lui Tom Sawyer','9786060864776','aventurile-lui-tom-sawer-cover.jpg',2,'2016-05-20',1),(40,'Prinț și cerșetor','9786060862871','print-si-cersetor-cover.jpg',2,'2020-05-20',18),(41,'Victoria vulturilor','9786067585414','victoria-vulturilor-cover.jpg',3,'2013-05-20',8),(42,'Imperiul de fildeș','9786067583427','imperiul-de-fildes-cover.jpg',3,'2010-05-20',4),(43,'Conversații cu o moartă','9736819493','conversatii-cu-o-moarta.jpg',4,'2016-05-20',14),(44,'Paradisul','9786064907936','paradisul-cover.jpeg',6,'2011-05-20',1),(47,'Infernul','9786060061137','infernul-cover.jpeg',6,'2011-05-20',1),(48,'Purgatoriul','9786060067146','purgatoriul-cover.jpeg',6,'2013-05-20',1),(49,'Religia în limitele rațiunii pure','9789735076504','Religia-in-limitele-ratiunii-pure.jpg',5,'2023-05-20',0),(50,'Tema pentru acasă','9789975334952','tema-pentru-acasa.jpg',7,'2013-05-20',9),(51,'Baltagul','9786069335505','baltagul.jpg',5,'2011-05-20',17);
+INSERT INTO `carte` VALUES (4,'Harry Potter și Camera Secretelor','9786060865926','harry-potter-si-camera-secretelor.jpg',1,'2011-09-05',14),(5,'Orasul bantuit','9786065794474','orasul-bantuit.jpg',3,'2021-12-01',0),(6,'Harry Potter și Piatra Filosofala','9786060861975','harry-potter-si-piatra-filosofala.jpg',1,'2023-03-05',2),(7,'The Stand','9786060861175','the-stand.jpeg',3,'2012-09-25',5),(11,'Amintiri din copilărie','9781260821973','amintiri-din-copilarie.jpg',5,'2012-09-18',1),(33,'Harry Potter și prizonierul din Azkaban','9786060861973','harry-potter-si-prizonierul-din-azkaban-cover.jpg',1,'2015-12-22',0),(34,'Harry Potter și Pocalul de Foc','9786060865988','harry-potter-4-si-pocalul-de-foc-cover.jpg',1,'2018-04-28',6),(35,'Harry Potter și Ordinul Phoenix','9786067887723','harry-potter-si-ordinul-phoenix-5-cover.jpg',1,'2020-04-18',4),(36,'Harry Potter și Prințul Semisânge','9786060862345','harry-potter-si-printul-semisange-cover.jpg',1,'2023-02-10',17),(37,'Harry Potter și Talismanele Morții','9786060861331','harry-potter-si-talismanele-mortii-cover.jpg',1,'2017-04-14',17),(38,'Aventurile lui Huckleberry Finn','9786060865827','aventurile-lui-huckleberry-finn-cover.jpg',2,'2021-09-03',14),(39,'Aventurile lui Tom Sawyer','9786060864776','aventurile-lui-tom-sawer-cover.jpg',2,'2019-02-16',1),(40,'Prinț și cerșetor','9786060862871','print-si-cersetor-cover.jpg',2,'2021-03-16',18),(41,'Victoria vulturilor','9786067585414','victoria-vulturilor-cover.jpg',3,'2011-04-06',8),(42,'Imperiul de fildeș','9786067583427','imperiul-de-fildes-cover.jpg',3,'2011-04-07',4),(43,'Conversații cu o moartă','9736819493','conversatii-cu-o-moarta.jpg',4,'2013-02-17',14),(44,'Paradisul','9786064907936','paradisul-cover.jpeg',6,'2022-06-18',1),(47,'Infernul','9786060061137','infernul-cover.jpeg',6,'2021-07-14',1),(48,'Purgatoriul','9786060067146','purgatoriul-cover.jpeg',6,'2016-11-18',1),(49,'Religia în limitele rațiunii pure','9789735076504','Religia-in-limitele-ratiunii-pure.jpg',5,'2010-05-29',0),(50,'Tema pentru acasă','9789975334952','tema-pentru-acasa.jpg',7,'2019-12-20',9),(51,'Baltagul','9786069335505','baltagul.jpg',5,'2017-03-28',17);
 /*!40000 ALTER TABLE `carte` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -106,9 +134,9 @@ DROP TABLE IF EXISTS `categorie`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `categorie` (
-  `id_categorie` int NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `nume_categorie` varchar(50) NOT NULL,
-  PRIMARY KEY (`id_categorie`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -135,7 +163,7 @@ CREATE TABLE `categorii_carte` (
   KEY `fk_categorii_to_carte` (`id_carte`),
   KEY `fk_categorii_to_categorie` (`id_categorie`),
   CONSTRAINT `fk_categorii_to_carte` FOREIGN KEY (`id_carte`) REFERENCES `carte` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  CONSTRAINT `fk_categorii_to_categorie` FOREIGN KEY (`id_categorie`) REFERENCES `categorie` (`id_categorie`) ON DELETE RESTRICT ON UPDATE RESTRICT
+  CONSTRAINT `fk_categorii_to_categorie` FOREIGN KEY (`id_categorie`) REFERENCES `categorie` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -241,7 +269,7 @@ CREATE TABLE `formular_imprumut` (
   KEY `fk_imprumut_carte` (`id_carte`),
   KEY `fk_imprumut_client` (`cnp_client`),
   CONSTRAINT `fk_imprumut_carte` FOREIGN KEY (`id_carte`) REFERENCES `carte` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -250,7 +278,7 @@ CREATE TABLE `formular_imprumut` (
 
 LOCK TABLES `formular_imprumut` WRITE;
 /*!40000 ALTER TABLE `formular_imprumut` DISABLE KEYS */;
-INSERT INTO `formular_imprumut` VALUES (3,38,'123456789101','2023-05-22 15:41:09'),(4,49,'123456789101','2023-05-22 22:08:51'),(9,34,'1','2023-05-23 00:09:07');
+INSERT INTO `formular_imprumut` VALUES (3,38,'123456789101','2023-05-22 15:41:09'),(4,49,'123456789101','2023-05-22 22:08:51'),(9,34,'1','2023-05-23 00:09:07'),(10,36,'1','2023-05-23 13:14:01'),(11,37,'1','2023-05-23 13:14:04');
 /*!40000 ALTER TABLE `formular_imprumut` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -326,7 +354,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `complete_carte_view` AS select `a`.`id` AS `ID`,`a`.`titlu_carte` AS `Titlu`,`a`.`isbn` AS `ISBN`,`e`.`nume` AS `Editura`,concat(`au`.`nume`,' ',`au`.`prenume`) AS `Autor`,`f_categoriile`(`a`.`id`) AS `Categorii`,`a`.`data_publicarii` AS `Publicare`,`a`.`stoc` AS `Stoc` from (((`carte` `a` join `editura` `e` on((`e`.`id` = `a`.`id_editura`))) join `autori_carte` `ac` on((`ac`.`id_carte` = `a`.`id`))) join `autor` `au` on((`au`.`id_autor` = `ac`.`id_autor`))) group by `a`.`id` */;
+/*!50001 VIEW `complete_carte_view` AS select `a`.`id` AS `ID`,`a`.`titlu_carte` AS `Titlu`,`a`.`isbn` AS `ISBN`,`e`.`nume` AS `Editura`,concat(`au`.`nume`,' ',`au`.`prenume`) AS `Autor`,`F_CATEGORIILE_nume`(`a`.`id`) AS `Categorii`,`a`.`data_publicarii` AS `Publicare`,`a`.`stoc` AS `Stoc` from (((`carte` `a` join `editura` `e` on((`e`.`id` = `a`.`id_editura`))) join `autori_carte` `ac` on((`ac`.`id_carte` = `a`.`id`))) join `autor` `au` on((`au`.`id_autor` = `ac`.`id_autor`))) group by `a`.`id` */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -376,4 +404,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-23 10:18:11
+-- Dump completed on 2023-05-26 10:40:04
