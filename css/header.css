@@ -26,6 +26,7 @@ header {
     background-color: #FAEDCD;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 .nav-container nav {
@@ -77,7 +78,6 @@ header {
     position: absolute;
     background-color: #fff;
     width: fit-content;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
 }
 
 .nav-container #desktop-menu .drop-menu-item {
@@ -148,10 +148,10 @@ header {
 
 
 /* 600px or less */
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
 
     #mobileMenuIcon {
-        display: inline;
+        display: inline-block;
     }
 
     #desktop-menu {
@@ -168,13 +168,13 @@ header {
 }
 
 /* At least 610px */
-@media only screen and (min-width: 610px) {
+@media screen and (min-width: 601px) {
     #desktop-menu {
         display: inline-block;
     }
 
     #mobileMenuIcon {
-        display: none;
+        display: none !important; 
     }
 }
 
