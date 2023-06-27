@@ -50,8 +50,12 @@ require('php/mysql.php');
 
 
     </div>
+    <!-- <form action="book.php?id=5" method="post">
+            <button type="submit">Click</button>
+        </form> -->
 
     <?php require('./php/footer.php'); ?>
+    <!-- Latest books, published within a year -->
 </body>
 
 </html>
